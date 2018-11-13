@@ -1,0 +1,80 @@
+body {
+   font-family: serif;
+   background-image: url("background Home.jpg");
+   background-color: #cccccc;
+   background-repeat: no-repeat;
+   background-size: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #0a1628;
+}
+
+.active {
+  background-color: #3599e0;
+}
+
+#ABO{
+  position:absolute;
+  bottom:10px;
+}
+
+.Social-Images{
+  width: 55px;
+  height: 50px;
+  color: white;
+}
+.Social-Image{
+  width: 80px;
+  height: 50px;
+  color: white;
+}
+.Social-Picture{
+  width: 50px;
+  height: 50px;
+  color: white;
+}
+.Social-GIF{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 750px;
+  height: 500px;
+  color: white;
+}
+.Social-Foto{
+  width: 55px;
+  height: 50px;
+  color: white;
+}
+.Social-Photoes{
+  width: 80px;
+  height: 50px;
+  color: white;
+}
+.Social-Photo{
+  width: 50px;
+  height: 50px;
+  color: white;
+}
