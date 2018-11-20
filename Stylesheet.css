@@ -15,7 +15,8 @@ ul {
 }
 
 li {
-    float: left;
+  float: top;  
+  float: left;
 }
 
 li a {
