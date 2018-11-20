@@ -1,17 +1,17 @@
 body {
-   font-family: serif;
-   background-image: url("background Home.jpg");
+   font-family: agency fb;
+   background-image: url("Retro Wave 2.1.png");
    background-color: #cccccc;
    background-repeat: no-repeat;
-   background-size: auto;
+   background-size: 100%;
 }
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: auto;
     overflow: hidden;
-    background-color: #333;
+    background-color: url("Neon Squares.jpg");
 }
 
 li {
@@ -20,19 +20,19 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: #4CEACB;
     text-align: center;
-    padding: 14px 16px;
+    padding: 18px 25px;
     text-decoration: none;
 }
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #0a1628;
+    background-color: #BE5DF5;
 }
 
 .active {
-  background-color: #3599e0;
+  background-color: #BE5DF5;
 }
 
 #ABO{
@@ -41,12 +41,12 @@ li a:hover {
 }
 
 .Social-Images{
-  width: 55px;
+  width: 90px;
   height: 50px;
   color: white;
 }
 .Social-Image{
-  width: 80px;
+  width: 100px;
   height: 50px;
   color: white;
 }
