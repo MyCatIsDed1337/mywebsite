@@ -78,7 +78,7 @@ function getRandomInt(min, max) {
 function loop() {
   requestAnimationFrame(loop);
   // slow game loop to 15 fps instead of 60 (60/15 = 4)
-  if (++count < 4) {
+  if (++count < 0) {
     return;
   }
   count = 0;
@@ -175,11 +175,6 @@ document.addEventListener('keydown', function(e) {
 // start the game
 requestAnimationFrame(loop);
 </script>
-
-<div  class="SnakeLogo">
-    <a><img  class="SnakeLogo" src="SnakeLogo.png" ></a>
-
-  </div>
 
 <div id="ABO">
 
