@@ -1,7 +1,6 @@
 body {
    font-family: agency fb;
-   background-image: url("Retro Wave 2.1.png");
-   background-color: #cccccc;
+   background-color: black;
    background-repeat: no-repeat;
    background-size: 100%;
 }
@@ -11,7 +10,7 @@ ul {
     margin: auto;
     padding: auto;
     overflow: hidden;
-    background-color: url("Neon Squares.jpg");
+    background-color: grey;
 }
 
 li {
@@ -21,7 +20,7 @@ li {
 
 li a {
     display: block;
-    color: #4CEACB;
+    color: black;
     text-align: left;
     padding: 18px 25px;
     text-decoration: none;
