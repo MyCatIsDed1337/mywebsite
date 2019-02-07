@@ -1,6 +1,6 @@
 body {
    font-family: agency fb;
-   background-color: black;
+   background-color: #585858;
    background-repeat: no-repeat;
    background-size: 100%;
 }
@@ -11,11 +11,13 @@ ul {
     padding: auto;
     overflow: hidden;
     background-color: grey;
+    border-bottom: 200px blue;
 }
 
 li {
-  float: top;  
+  float: top;
   float: left;
+  border-bottom: 100px blue;
 }
 
 li a {
@@ -24,15 +26,16 @@ li a {
     text-align: left;
     padding: 18px 25px;
     text-decoration: none;
+    border-bottom: 2000px blue;
 }
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #BE5DF5;
+    background-color: #F73F3F;
 }
 
 .active {
-  background-color: #BE5DF5;
+  background-color: #F73F3F;
 }
 
 #ABO{
