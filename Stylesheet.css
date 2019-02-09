@@ -1,6 +1,10 @@
 body {
    font-family: agency fb;
+<<<<<<< HEAD
    background-color: #cccccc;
+=======
+   background-color: #585858;
+>>>>>>> 33e804fd54c526af821cafb2f21abf6099663e0f
    background-repeat: no-repeat;
    background-size: 100%;
 }
@@ -53,6 +57,7 @@ ul {
     margin: auto;
     padding: auto;
     overflow: hidden;
+<<<<<<< HEAD
     background-color: black;
 }
 
@@ -73,24 +78,34 @@ ul {
 
 li {
   position: top;  
+=======
+    background-color: grey;
+    border-bottom: 200px blue;
+}
+
+li {
+  float: top;
+>>>>>>> 33e804fd54c526af821cafb2f21abf6099663e0f
   float: left;
+  border-bottom: 100px blue;
 }
 
 li a {
     display: block;
-    color: #4CEACB;
+    color: black;
     text-align: left;
     padding: 18px 25px;
     text-decoration: none;
+    border-bottom: 2000px blue;
 }
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #BE5DF5;
+    background-color: #F73F3F;
 }
 
 .active {
-  background-color: #BE5DF5;
+  background-color: #F73F3F;
 }
 
 #ABO{
