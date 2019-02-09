@@ -1,17 +1,17 @@
 body {
    font-family: agency fb;
 
-   background-color: #cccccc;
+   background-color: #717171;
 
-   background-color: #585858;
+   background-color: #717171;
    background-repeat: no-repeat;
    background-size: 100%;
 }
 
 /* Dropdown Button */
 .dropbtn {
-    background-color: black;
-  color: #4CEACB;
+    background-color: #F86464;
+  color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -56,18 +56,11 @@ ul {
     margin: auto;
     padding: auto;
     overflow: hidden;
-<<<<<<< HEAD
     background-color: black;
 }
 
-.SnakeLogo{
-  width: 250px;
-  height: 125px;  
-
-}
-
 .navBarFoot{
-  background-color: black;
+  background-color: #717171;
     
     position: fixed;
     bottom: 0;
@@ -77,14 +70,13 @@ ul {
 
 li {
   position: top;  
-=======
+
     background-color: grey;
     border-bottom: 200px blue;
 }
 
 li {
   float: top;
->>>>>>> 33e804fd54c526af821cafb2f21abf6099663e0f
   float: left;
   border-bottom: 100px blue;
 }
@@ -107,10 +99,7 @@ li a:hover {
   background-color: #F73F3F;
 }
 
-#ABO{
-  position:absolute;
-  bottom:10px;
-}
+
 
 .Social-Images{
   width: 90px;
@@ -123,29 +112,6 @@ li a:hover {
   color: white;
 }
 .Social-Picture{
-  width: 50px;
-  height: 50px;
-  color: white;
-}
-.Social-GIF{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 750px;
-  height: 500px;
-  color: white;
-}
-.Social-Foto{
-  width: 55px;
-  height: 50px;
-  color: white;
-}
-.Social-Photoes{
-  width: 80px;
-  height: 50px;
-  color: white;
-}
-.Social-Photo{
   width: 50px;
   height: 50px;
   color: white;
