@@ -1,16 +1,15 @@
 body {
    font-family: agency fb;
 
-   background-color: #717171;
+   background-image: url("BackgroundPicc.jpg");
 
-   background-color: #717171;
-   background-repeat: no-repeat;
-   background-size: 100%;
+   background-repeat: 100%;
+   background-size: 10%;
 }
 
 /* Dropdown Button */
 .dropbtn {
-    background-color: #F86464;
+    background-color: rgb(36, 36, 36);
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -35,20 +34,20 @@ body {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: #4CEACB;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #BE5DF5;}
+.dropdown-content a:hover {background-color: grey;}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #BE5DF5;}
+.dropdown:hover .dropbtn {background-color: grey;}
 
 ul {
     position: top;
@@ -60,7 +59,7 @@ ul {
 }
 
 .navBarFoot{
-  background-color: #717171;
+  background-image: ur,("BackgroundPicc.jpg");
     
     position: fixed;
     bottom: 0;
@@ -96,7 +95,7 @@ li a:hover {
 }
 
 .active {
-  background-color: #F73F3F;
+  background-color: rgb(54, 54, 54);
 }
 
 
