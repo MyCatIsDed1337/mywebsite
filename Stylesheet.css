@@ -1,10 +1,61 @@
 body {
-   font-family: agency fb;
-
+   font-family: 'agency fb';
    background-image: url("BackgroundPicc.jpg");
-
    background-repeat: 100%;
    background-size: 10%;
+}
+
+a{
+  text-decoration: none;
+}
+html,
+#nobbit {
+  height: 100%;
+  margin: 0;
+}
+
+b#nobbit {
+  background-color: (black);
+}
+
+.canvas {
+  border: 5px solid #BE5DF5;
+}
+#Start {
+  background: black;
+  width: 80px;
+  height: 80;
+  border: 8px gray;
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  left: 100px;
+  top: 10px;
+}
+#startMenuView {
+  position: absolute;
+  top: 250px;
+  left: 150px;
+  background-color: black;
+  height: 250px;
+  width: 150px;
+}
+
+#countScore {
+  font-size: 16px;
+  color: white;
+}
+
+#gameOverView {
+  background: black;
+  width: 160px;
+  height: 180px;
+  border: blue;
+  color: white;
+  font-size: 34px;
+  position: absolute;
+  left: 100px;
+  top: -300px;
 }
 
 /* Dropdown Button */
