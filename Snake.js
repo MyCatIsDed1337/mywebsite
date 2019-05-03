@@ -135,7 +135,7 @@ function game() {
 
 // Play knappen saker
 function onPlayBtnPress() {
-  if(isDead === false)
+  if(isDead === true)
     myFunction();
 }
 // 
@@ -152,7 +152,11 @@ function getRandomInt(min, max) {
 }
 
 function showStartMenu(){
-  
+  isDead = true;
+  document.getElementById(onPlayBtnPress) = function () {
+    startMenuView.style.top = "-400px";
+    myFunction();
+  }
 
 }
 
