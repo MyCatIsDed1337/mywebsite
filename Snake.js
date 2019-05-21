@@ -1,6 +1,7 @@
-var isDead = true;
+var isDead = false;
 var isGamePaused = false;
 var score = 0;
+let gameLoop;
 
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
@@ -30,7 +31,7 @@ var apple = {
 function game() {
 
   function loop() {
-    requestAnimationFrame(loop);
+    gameLoop = requestAnimationFrame(loop);
     // slow game loop to 15 fps instead of 60 (60/15 = 4)
     if (++count < 4) {
       return;
@@ -42,17 +43,21 @@ function game() {
     snake.y += snake.dy;
     // wrap snake position horizontally on edge of screen
     if (snake.x < 0) {
-      snake.x = canvas.width - grid;
+      cancelAnimationFrame(gameLoop);
+      //snake.x = canvas.width - grid;
     }
     else if (snake.x >= canvas.width) {
-      snake.x = 0;
+      cancelAnimationFrame(gameLoop);
+      //snake.x = 0;
     }
     // wrap snake position vertically on edge of screen
     if (snake.y < 0) {
-      snake.y = canvas.height - grid;
+      cancelAnimationFrame(gameLoop);
+      //snake.y = canvas.height - grid;
     }
     else if (snake.y >= canvas.height) {
-      snake.y = 0;
+      cancelAnimationFrame(gameLoop);
+      //snake.y = 0;
     }
     // keep track of where snake has been. front of the array is always the head
     snake.cells.unshift({ x: snake.x, y: snake.y });
@@ -74,68 +79,25 @@ function game() {
         score += 1;
         countScore.innerText = score;
         // canvas is 400x400 which is 25x25 grids
-        apple.x = getRandomInt(0, 25) * grid;
-        apple.y = getRandomInt(0, 25) * grid;
+        apple.x = getRandomInt(0, canas.width/grid) * grid;
+        apple.y = getRandomInt(0, canvas.height/grid) * grid;
       }
       // check collision with all cells after this one (modified bubble sort)
       for (var i = index + 1; i < snake.cells.length; i++) {
         // snake occupies same space as a body part. reset game
         if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
           isDead = true;
+          cancelAnimationFrame(gameLoop);
           showGameOverView();
         }
       }
     });
   }
-
-  // listen to keyboard events to move the snake
-  document.addEventListener('keydown', function (e) {
-    // prevent snake from backtracking on itself by checking that it's
-    // not already moving on the same axis (pressing left while moving
-    // left won't do anything, and pressing right while moving left
-    // shouldn't let you collide with your own body)
-    // left arrow key
-    if (e.which === 37 && snake.dx === 0) {
-      snake.dx = -grid;
-      snake.dy = 0;
-    } // keyboard button "A"
-    else if (e.which === 65 && snake.dx === 0) {
-      snake.dx = -grid;
-      snake.dy = 0;
-    }
-    // up arrow key
-    else if (e.which === 38 && snake.dy === 0) {
-      snake.dy = -grid;
-      snake.dx = 0;
-    }// keyboard button "W"
-    else if (e.which === 87 && snake.dy === 0) {
-      snake.dy = -grid;
-      snake.dx = 0;
-    }
-    // right arrow key
-    else if (e.which === 39 && snake.dx === 0) {
-      snake.dx = grid;
-      snake.dy = 0;
-    }// keyboard button "D"
-    else if (e.which === 68 && snake.dx === 0) {
-      snake.dx = grid;
-      snake.dy = 0;
-    }
-    // down arrow key
-    else if (e.which === 40 && snake.dy === 0) {
-      snake.dy = grid;
-      snake.dx = 0;
-    }// keyboard button "S"
-    else if (e.which === 83 && snake.dy === 0) {
-      snake.dy = grid;
-      snake.dx = 0;
-    }
-  });
 }
 
 // Play knappen saker
 function onPlayBtnPress() {
-  if(isDead === true)
+  if (isDead === true)
     myFunction();
 }
 // 
@@ -143,30 +105,54 @@ function onScoreBtnPress() {
 
 }
 
-function myFunction() {
-  requestAnimationFrame(loop);
+function pauseMenu() {
+  isDead = true;
+  onPlayBtnPress = function () {
+    myFunction();
+  }
+}
+
+function steeringControl() {
+  document.addEventListener('keydown', function (event) {
+    // "W" key or arrow up
+    if ((e.which === 38 && snake.dy === 0) || (e.which === 87 && snake.dy === 0)) {
+      snake.dy = -grid;
+      snake.dx = 0;
+      // "S" key or arrow down
+    } else if ((e.which === 83 && snake.dy === 0) || (e.which === 40 && snake.dy === 0)) {
+      snake.dy = grid;
+      snake.dx = 0;
+      // "A" ker or arrow left
+    } else if ((e.which === 65 && snake.dx === 0) || (e.which === 37 && snake.dx === 0)) {
+      snake.dx = -grid;
+      snake.dy = 0;
+      // "D" key or arrow right
+    } else if ((e.which === 68 && snake.dx === 0) || (e.which === 39 && snake.dx === 0)) {
+      snake.dx = grid;
+      snake.dy = 0;
+    }
+  });
 }
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function showStartMenu(){
+function showStartMenu() {
   isDead = true;
-  document.getElementById(onPlayBtnPress) = function () {
+  document.getElementById(onPlayBtnPress) = function game() {
     startMenuView.style.top = "-400px";
-    myFunction();
   }
 
 }
 
-function showGameOverView() {
-  isDead = true;
-  var playBtn = document.getElementById("btnGameOverStart");
-  var gameOverDiv = document.getElementById("gameOverView");
-  gameOverDiv.style.top = "300px";
-  playBtn.onclick = function () {
-    gameOverDiv.style.top = "-300px";
-    myFunction();
-  }
-}
+//function showGameOverView() {
+  //isDead = true;
+  //var playBtn = document.getElementById("btnGameOverStart");
+  //var gameOverDiv = document.getElementById("gameOverView");
+  //gameOverDiv.style.top = "300px";
+  //playBtn.onclick = function () {
+  //gameOverDiv.style.top = "-300px";
+  //myFunction();
+  //}
+//}

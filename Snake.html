@@ -22,40 +22,66 @@
     </div>
   </div>
 
-  <!-- start game menu -->
+  <!-- Start Game Meny -->
   <div id="startMenuView">
-    <!--Start button. And it's ID-->
-    <button onclick="onPlayBtnPress()">PlayBtn</button>
-
+    <!--Start button. Och dens ID-->
+    <button id="Startbtn" onclick="onPlayBtnPress()">Play</button>
   </div>
 
-  <!--Game Over Menu-->
-  <div id="gameOverView">
+  <!--Game Over Meny-->
+  <!--<div id="gameOverView">
     <p id="GameOver">Game Over</p>
     <button id="btnGameOverStart" onclick="onPlayBtnPress()">PlayBtn</button>
     <p id="countScore">0</p>
-  </div>
+  </div>-->
 
-  <!-- Allt som ska visas i score -->
+  <!--<div id="pauseMenu">
+    <p>Menu</p>
+    <button onclick="onPlayBtnPress()">Play</button>
+    <p id="countScore">0</p>
+  </div>-->
+
+  <!-- Allt Som Ska Visas I Score -->
   <div id="highScoreView">
-
+    <table if="score-Table">
+      <tr>
+        <th id="table-Number">1#</th>
+        <th id="table-Number">2#</th>
+        <th id="table-Number">3#</th>
+        <th id="table-Number">4#</th>
+        <th id="table-Number">5#</th>
+      </tr>
+      <tr>
+        <td id="table-Name"></td>
+        <td id="table-Name"></td>
+        <td id="table-Name"></td>
+        <td id="table-Name"></td>
+        <td id="table-Name"></td>
+      </tr>
+      <tr>
+        <td id="table-Score"></td>
+        <td id="table-Score"></td>
+        <td id="table-Score"></td>
+        <td id="table-Score"></td>
+        <td id="table-Score"></td>
+      </tr>
+    </table>
   </div>
 
-  <!--Allt som ska visas i HUD-->
+  <!--Allt Som Ska Visas I HUD-->
   <div id="gameHud">
     <p id="countScore">0</p>
 
   </div>
 
 
-  <!--Game plattform size-->
-  <canvas class="canvas" width="400" height="400" id="game"></canvas>
-  
-  <footer id="ABO">
-    <a href="https://www.instagram.com/grunken23/"><img class="Social-Images" src="IG and YT bop.png"
-        alt="Instagram Icon"></a>
-    <a href="https://www.youtube.com/"><img class="Social-Image" src="YT Logo.png" alt="Youtube Icon"></a>
-    <a href="https://www.twitch.tv/"><img class="Social-Picture" src="Twitch Icon.png" alt="Twitch Icon"></a>
+  <!--Game Plattform Size-->
+  <canvas class="canvas" id="game"></canvas>
+
+  <footer class="navBarFoot">
+    <a href="https://www.instagram.com/grunken23/"><img class="Social-Images" src="IG-and-YT-bop.png" alt="Instagram Icon"></a>
+    <a href="https://www.youtube.com/"><img class="Social-Image" src="YT-Logo.png" alt="Youtube-Icon"></a>
+    <a href="https://www.twitch.tv/"><img class="Social-Picture" src="Twitch-Icon.png" alt="Twitch-Icon"></a>
   </footer>
 
   <script src="Snake.js"></script>

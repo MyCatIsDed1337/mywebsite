@@ -1,0 +1,23 @@
+{
+  "name": "retroweb-master",
+  "version": "1.0.0",
+  "description": "demo website I made at my school just so u know. bop. beep.",
+  "main": "Snake.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch SCSS -o CSS"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyCatIsDed1337/retroweb.git"
+  },
+  "author": "Adam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MyCatIsDed1337/retroweb/issues"
+  },
+  "homepage": "https://github.com/MyCatIsDed1337/retroweb#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

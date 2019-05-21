@@ -1,0 +1,13 @@
+@media ( min-width: 1920px) and (max-height: 1200px){
+    
+      
+}
+@media (min-width: 375px) and (max-height: 812px){
+    body {
+        background-color: yellow;
+    }
+    .canvas {
+        width: 200px;
+        height: 200px;
+    }
+}
