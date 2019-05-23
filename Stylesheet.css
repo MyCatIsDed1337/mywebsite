@@ -111,7 +111,7 @@ tr:nth-child(even) {
 /* Dropdown Button */
 .dropbtn {
     background-color: rgb(36, 36, 36);
-  color: white;
+  color: #18F106;
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -135,20 +135,20 @@ tr:nth-child(even) {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: white;
+  color: #18F106;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: grey;}
+.dropdown-content a:hover {background-color: black;}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: grey;}
+.dropdown:hover .dropbtn {background-color: black;}
 
 ul {
     position: top;
